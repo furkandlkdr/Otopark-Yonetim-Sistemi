@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.leftPannel = new System.Windows.Forms.Panel();
+            this.leftPanel = new System.Windows.Forms.Panel();
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.signInBtn = new System.Windows.Forms.Button();
@@ -32,14 +32,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).BeginInit();
             this.SuspendLayout();
             // 
-            // leftPannel
+            // leftPanel
             // 
-            this.leftPannel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(101)))), ((int)(((byte)(19)))));
-            this.leftPannel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftPannel.Location = new System.Drawing.Point(0, 0);
-            this.leftPannel.Name = "leftPannel";
-            this.leftPannel.Size = new System.Drawing.Size(168, 404);
-            this.leftPannel.TabIndex = 0;
+            this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(101)))), ((int)(((byte)(19)))));
+            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftPanel.Location = new System.Drawing.Point(0, 0);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(168, 404);
+            this.leftPanel.TabIndex = 0;
             // 
             // usernameTxt
             // 
@@ -92,11 +92,12 @@
             // header
             // 
             this.header.AutoSize = true;
-            this.header.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.header.Location = new System.Drawing.Point(301, 15);
+            this.header.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.header.ForeColor = System.Drawing.Color.Black;
+            this.header.Location = new System.Drawing.Point(301, 9);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(140, 21);
-            this.header.TabIndex = 1;
+            this.header.Size = new System.Drawing.Size(141, 25);
+            this.header.TabIndex = 5;
             this.header.Text = "Faruk Otopark";
             // 
             // SignPage
@@ -105,12 +106,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(585, 404);
+            this.Controls.Add(this.header);
             this.Controls.Add(this.headerPic);
             this.Controls.Add(this.signInBtn);
             this.Controls.Add(this.passwordTxt);
             this.Controls.Add(this.usernameTxt);
-            this.Controls.Add(this.header);
-            this.Controls.Add(this.leftPannel);
+            this.Controls.Add(this.leftPanel);
             this.Font = new System.Drawing.Font("Raleway SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -124,7 +125,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel leftPannel;
+        private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.TextBox usernameTxt;
         private System.Windows.Forms.TextBox passwordTxt;
         private System.Windows.Forms.Button signInBtn;

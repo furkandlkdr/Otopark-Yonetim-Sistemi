@@ -17,7 +17,7 @@ namespace OtoparkYonetimSistemi {
         }
         public SignPage() {
             InitializeComponent();
-            changeButtonToRounded(signInBtn);
+            //changeButtonToRounded(signInBtn);
         }
 
     }

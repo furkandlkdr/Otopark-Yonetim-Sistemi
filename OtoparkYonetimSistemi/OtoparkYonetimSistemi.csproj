@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarPannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarPannel.Designer.cs">
+      <DependentUpon>CarPannel.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CarPannel.resx">
+      <DependentUpon>CarPannel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignPage.resx">
       <DependentUpon>SignPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +94,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Asset\logo_faruk_otopark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Asset\parking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Asset\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Asset\parking-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
