@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OtoparkYonetimSistemi {
-    public partial class CarPannel : Form {
-        public CarPannel() {
+    public partial class Places : Form {
+        public Places() {
             InitializeComponent();
         }
     }

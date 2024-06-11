@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarPannel.cs">
+    <Compile Include="CarPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CarPannel.Designer.cs">
-      <DependentUpon>CarPannel.cs</DependentUpon>
+    <Compile Include="CarPanel.Designer.cs">
+      <DependentUpon>CarPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Places.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Places.Designer.cs">
+      <DependentUpon>Places.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParkingScreen.Designer.cs">
+      <DependentUpon>ParkingScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
@@ -63,8 +75,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CarPannel.resx">
-      <DependentUpon>CarPannel.cs</DependentUpon>
+    <EmbeddedResource Include="CarPanel.resx">
+      <DependentUpon>CarPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParkingScreen.resx">
+      <DependentUpon>ParkingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Places.resx">
+      <DependentUpon>Places.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignPage.resx">
       <DependentUpon>SignPage.cs</DependentUpon>
@@ -103,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Asset\parking-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Asset\cross.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

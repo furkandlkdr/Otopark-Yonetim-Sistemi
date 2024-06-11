@@ -27,8 +27,8 @@
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.signInBtn = new System.Windows.Forms.Button();
-            this.headerPic = new System.Windows.Forms.PictureBox();
             this.header = new System.Windows.Forms.Label();
+            this.headerPic = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,16 +79,6 @@
             this.signInBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.signInBtn.UseVisualStyleBackColor = false;
             // 
-            // headerPic
-            // 
-            this.headerPic.Image = global::OtoparkYonetimSistemi.Properties.Resources.logo_faruk_otopark;
-            this.headerPic.Location = new System.Drawing.Point(306, 39);
-            this.headerPic.Name = "headerPic";
-            this.headerPic.Size = new System.Drawing.Size(125, 125);
-            this.headerPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.headerPic.TabIndex = 4;
-            this.headerPic.TabStop = false;
-            // 
             // header
             // 
             this.header.AutoSize = true;
@@ -99,6 +89,16 @@
             this.header.Size = new System.Drawing.Size(141, 25);
             this.header.TabIndex = 5;
             this.header.Text = "Faruk Otopark";
+            // 
+            // headerPic
+            // 
+            this.headerPic.Image = global::OtoparkYonetimSistemi.Properties.Resources.logo_faruk_otopark;
+            this.headerPic.Location = new System.Drawing.Point(306, 39);
+            this.headerPic.Name = "headerPic";
+            this.headerPic.Size = new System.Drawing.Size(125, 125);
+            this.headerPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.headerPic.TabIndex = 4;
+            this.headerPic.TabStop = false;
             // 
             // SignPage
             // 
@@ -116,6 +116,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "SignPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome Page";
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).EndInit();
             this.ResumeLayout(false);
