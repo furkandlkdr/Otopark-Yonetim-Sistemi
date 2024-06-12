@@ -25,14 +25,14 @@
         private void InitializeComponent() {
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.placeGrid = new System.Windows.Forms.DataGridView();
             this.editButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.statusBox = new System.Windows.Forms.ComboBox();
-            this.positionText = new System.Windows.Forms.TextBox();
             this.header = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.closePic = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,17 +42,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.garagePic = new System.Windows.Forms.PictureBox();
             this.headerPic = new System.Windows.Forms.PictureBox();
-            this.closePic = new System.Windows.Forms.PictureBox();
+            this.posRowBox = new System.Windows.Forms.ComboBox();
+            this.posColBox = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.placeGrid)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closePic)).BeginInit();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.garagePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closePic)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -76,15 +77,21 @@
             this.panel2.Size = new System.Drawing.Size(1005, 30);
             this.panel2.TabIndex = 20;
             // 
-            // dataGridView1
+            // placeGrid
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(128, 177);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1127, 661);
-            this.dataGridView1.TabIndex = 19;
+            this.placeGrid.AllowUserToAddRows = false;
+            this.placeGrid.AllowUserToDeleteRows = false;
+            this.placeGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.placeGrid.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.placeGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.placeGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.placeGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.placeGrid.Location = new System.Drawing.Point(128, 177);
+            this.placeGrid.Name = "placeGrid";
+            this.placeGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.placeGrid.Size = new System.Drawing.Size(1127, 661);
+            this.placeGrid.TabIndex = 19;
+            this.placeGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.placeGrid_CellContentClick);
             // 
             // editButton
             // 
@@ -96,9 +103,10 @@
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(196, 35);
             this.editButton.TabIndex = 16;
-            this.editButton.Text = "Aracı Düzenle";
+            this.editButton.Text = "Alan Düzenle";
             this.editButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // addButton
             // 
@@ -110,9 +118,10 @@
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(196, 35);
             this.addButton.TabIndex = 17;
-            this.addButton.Text = "Araç Ekle";
+            this.addButton.Text = "Alan Ekle";
             this.addButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // deleteButton
             // 
@@ -124,9 +133,10 @@
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(196, 35);
             this.deleteButton.TabIndex = 18;
-            this.deleteButton.Text = "Aracı Sil";
+            this.deleteButton.Text = "Alanı Sil";
             this.deleteButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // statusBox
             // 
@@ -135,26 +145,13 @@
             this.statusBox.FormattingEnabled = true;
             this.statusBox.Items.AddRange(new object[] {
             "Dolu",
-            "Boş",
-            "Bakımda"});
-            this.statusBox.Location = new System.Drawing.Point(768, 83);
+            "Bos",
+            "Bakimda"});
+            this.statusBox.Location = new System.Drawing.Point(935, 83);
             this.statusBox.Name = "statusBox";
             this.statusBox.Size = new System.Drawing.Size(196, 29);
             this.statusBox.TabIndex = 15;
             this.statusBox.Text = "Durumu";
-            // 
-            // positionText
-            // 
-            this.positionText.BackColor = System.Drawing.SystemColors.Window;
-            this.positionText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.positionText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.positionText.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.positionText.Location = new System.Drawing.Point(430, 83);
-            this.positionText.Name = "positionText";
-            this.positionText.Size = new System.Drawing.Size(196, 29);
-            this.positionText.TabIndex = 14;
-            this.positionText.Text = "Park yeri";
-            this.positionText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // header
             // 
@@ -176,6 +173,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 850);
             this.panel1.TabIndex = 9;
+            // 
+            // closePic
+            // 
+            this.closePic.BackColor = System.Drawing.Color.Transparent;
+            this.closePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.closePic.Image = global::OtoparkYonetimSistemi.Properties.Resources.cross;
+            this.closePic.Location = new System.Drawing.Point(115, 12);
+            this.closePic.Name = "closePic";
+            this.closePic.Size = new System.Drawing.Size(61, 57);
+            this.closePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.closePic.TabIndex = 7;
+            this.closePic.TabStop = false;
             // 
             // label1
             // 
@@ -279,17 +288,37 @@
             this.headerPic.TabIndex = 5;
             this.headerPic.TabStop = false;
             // 
-            // closePic
+            // posRowBox
             // 
-            this.closePic.BackColor = System.Drawing.Color.Transparent;
-            this.closePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.closePic.Image = global::OtoparkYonetimSistemi.Properties.Resources.cross;
-            this.closePic.Location = new System.Drawing.Point(115, 12);
-            this.closePic.Name = "closePic";
-            this.closePic.Size = new System.Drawing.Size(61, 57);
-            this.closePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.closePic.TabIndex = 7;
-            this.closePic.TabStop = false;
+            this.posRowBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posRowBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.posRowBox.FormattingEnabled = true;
+            this.posRowBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.posRowBox.Location = new System.Drawing.Point(263, 83);
+            this.posRowBox.Name = "posRowBox";
+            this.posRowBox.Size = new System.Drawing.Size(196, 29);
+            this.posRowBox.TabIndex = 15;
+            this.posRowBox.Text = "Satır";
+            // 
+            // posColBox
+            // 
+            this.posColBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.posColBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.posColBox.FormattingEnabled = true;
+            this.posColBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.posColBox.Location = new System.Drawing.Point(590, 83);
+            this.posColBox.Name = "posColBox";
+            this.posColBox.Size = new System.Drawing.Size(196, 29);
+            this.posColBox.TabIndex = 15;
+            this.posColBox.Text = "Sütun";
             // 
             // Places
             // 
@@ -298,12 +327,13 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1450, 850);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.placeGrid);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.posColBox);
+            this.Controls.Add(this.posRowBox);
             this.Controls.Add(this.statusBox);
-            this.Controls.Add(this.positionText);
             this.Controls.Add(this.header);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.leftPanel);
@@ -311,19 +341,19 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Places";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParkingPlaces";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.placeGrid)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closePic)).EndInit();
             this.leftPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.garagePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closePic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,12 +367,11 @@
         private System.Windows.Forms.PictureBox headerPic;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView placeGrid;
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.ComboBox statusBox;
-        private System.Windows.Forms.TextBox positionText;
         private System.Windows.Forms.Label header;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -351,5 +380,7 @@
         private System.Windows.Forms.PictureBox garagePic;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.PictureBox closePic;
+        private System.Windows.Forms.ComboBox posRowBox;
+        private System.Windows.Forms.ComboBox posColBox;
     }
 }

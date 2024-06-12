@@ -13,7 +13,7 @@ namespace OtoparkYonetimSistemi {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CarPanel());
+            Application.Run(new Places());
         }
     }
 }

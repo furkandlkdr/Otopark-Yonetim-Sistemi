@@ -228,12 +228,13 @@
             this.genderBox.FormattingEnabled = true;
             this.genderBox.Items.AddRange(new object[] {
             "Erkek",
-            "Kadın"});
+            "Kadin"});
             this.genderBox.Location = new System.Drawing.Point(934, 86);
             this.genderBox.Name = "genderBox";
             this.genderBox.Size = new System.Drawing.Size(196, 29);
             this.genderBox.TabIndex = 4;
             this.genderBox.Text = "Cinsiyet";
+            this.genderBox.SelectedIndexChanged += new System.EventHandler(this.genderBox_SelectedIndexChanged);
             // 
             // carTypeText
             // 

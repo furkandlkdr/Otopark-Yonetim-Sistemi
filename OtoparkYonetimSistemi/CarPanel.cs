@@ -114,6 +114,8 @@ namespace OtoparkYonetimSistemi {
             }
         }
 
-        
+        private void genderBox_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
     }
 }
