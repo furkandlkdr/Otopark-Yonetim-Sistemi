@@ -27,7 +27,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.logoutButton = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.garagePic = new System.Windows.Forms.PictureBox();
+            this.headerPic = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.closePic = new System.Windows.Forms.PictureBox();
             this.header = new System.Windows.Forms.Label();
             this.plateText = new System.Windows.Forms.TextBox();
             this.driverText = new System.Windows.Forms.TextBox();
@@ -37,25 +43,19 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.carsGrid = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.logoutButton = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.garagePic = new System.Windows.Forms.PictureBox();
-            this.headerPic = new System.Windows.Forms.PictureBox();
-            this.closePic = new System.Windows.Forms.PictureBox();
             this.leftPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.garagePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closePic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carsGrid)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftPanel
@@ -104,166 +104,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Park Yerleri";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.closePic);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1262, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 850);
-            this.panel1.TabIndex = 1;
-            // 
-            // header
-            // 
-            this.header.AutoSize = true;
-            this.header.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.header.ForeColor = System.Drawing.Color.Green;
-            this.header.Location = new System.Drawing.Point(124, 12);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(141, 25);
-            this.header.TabIndex = 2;
-            this.header.Text = "Faruk Otopark";
-            // 
-            // plateText
-            // 
-            this.plateText.BackColor = System.Drawing.SystemColors.Window;
-            this.plateText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.plateText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plateText.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.plateText.Location = new System.Drawing.Point(263, 88);
-            this.plateText.Name = "plateText";
-            this.plateText.Size = new System.Drawing.Size(196, 29);
-            this.plateText.TabIndex = 3;
-            this.plateText.Text = "Plaka";
-            this.plateText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // driverText
-            // 
-            this.driverText.BackColor = System.Drawing.SystemColors.Window;
-            this.driverText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.driverText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.driverText.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.driverText.Location = new System.Drawing.Point(584, 86);
-            this.driverText.Name = "driverText";
-            this.driverText.Size = new System.Drawing.Size(196, 29);
-            this.driverText.TabIndex = 3;
-            this.driverText.Text = "Sürücü";
-            this.driverText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // genderBox
-            // 
-            this.genderBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genderBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.genderBox.FormattingEnabled = true;
-            this.genderBox.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.genderBox.Location = new System.Drawing.Point(934, 86);
-            this.genderBox.Name = "genderBox";
-            this.genderBox.Size = new System.Drawing.Size(196, 29);
-            this.genderBox.TabIndex = 4;
-            this.genderBox.Text = "Cinsiyet";
-            // 
-            // carTypeText
-            // 
-            this.carTypeText.BackColor = System.Drawing.SystemColors.Window;
-            this.carTypeText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.carTypeText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carTypeText.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.carTypeText.Location = new System.Drawing.Point(422, 143);
-            this.carTypeText.Name = "carTypeText";
-            this.carTypeText.Size = new System.Drawing.Size(196, 29);
-            this.carTypeText.TabIndex = 3;
-            this.carTypeText.Text = "Araç Tipi";
-            this.carTypeText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // colorText
-            // 
-            this.colorText.BackColor = System.Drawing.SystemColors.Window;
-            this.colorText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.colorText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colorText.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.colorText.Location = new System.Drawing.Point(754, 143);
-            this.colorText.Name = "colorText";
-            this.colorText.Size = new System.Drawing.Size(196, 29);
-            this.colorText.TabIndex = 3;
-            this.colorText.Text = "Renk";
-            this.colorText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.BackColor = System.Drawing.Color.Brown;
-            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.ForeColor = System.Drawing.Color.White;
-            this.deleteButton.Location = new System.Drawing.Point(263, 194);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(196, 35);
-            this.deleteButton.TabIndex = 5;
-            this.deleteButton.Text = "Aracı Sil";
-            this.deleteButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.deleteButton.UseVisualStyleBackColor = false;
-            // 
-            // addButton
-            // 
-            this.addButton.BackColor = System.Drawing.Color.Green;
-            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.ForeColor = System.Drawing.Color.White;
-            this.addButton.Location = new System.Drawing.Point(584, 194);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(196, 35);
-            this.addButton.TabIndex = 5;
-            this.addButton.Text = "Araç Ekle";
-            this.addButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.addButton.UseVisualStyleBackColor = false;
-            // 
-            // editButton
-            // 
-            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(101)))), ((int)(((byte)(19)))));
-            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.ForeColor = System.Drawing.Color.White;
-            this.editButton.Location = new System.Drawing.Point(934, 194);
-            this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(196, 35);
-            this.editButton.TabIndex = 5;
-            this.editButton.Text = "Aracı Düzenle";
-            this.editButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.editButton.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(128, 257);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1127, 581);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Green;
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(185, 40);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1005, 30);
-            this.panel2.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(385, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(235, 21);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Otopark Yönetim Sistemi v0.7";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // logoutButton
             // 
@@ -320,6 +160,16 @@
             this.headerPic.TabIndex = 5;
             this.headerPic.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.closePic);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1262, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(188, 850);
+            this.panel1.TabIndex = 1;
+            // 
             // closePic
             // 
             this.closePic.BackColor = System.Drawing.Color.Transparent;
@@ -332,6 +182,170 @@
             this.closePic.TabIndex = 7;
             this.closePic.TabStop = false;
             // 
+            // header
+            // 
+            this.header.AutoSize = true;
+            this.header.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.header.ForeColor = System.Drawing.Color.Green;
+            this.header.Location = new System.Drawing.Point(124, 12);
+            this.header.Name = "header";
+            this.header.Size = new System.Drawing.Size(141, 25);
+            this.header.TabIndex = 2;
+            this.header.Text = "Faruk Otopark";
+            // 
+            // plateText
+            // 
+            this.plateText.BackColor = System.Drawing.SystemColors.Window;
+            this.plateText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.plateText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plateText.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.plateText.Location = new System.Drawing.Point(263, 88);
+            this.plateText.Name = "plateText";
+            this.plateText.Size = new System.Drawing.Size(196, 29);
+            this.plateText.TabIndex = 3;
+            this.plateText.Text = "Plaka";
+            this.plateText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.plateText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
+            // 
+            // driverText
+            // 
+            this.driverText.BackColor = System.Drawing.SystemColors.Window;
+            this.driverText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.driverText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.driverText.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.driverText.Location = new System.Drawing.Point(584, 86);
+            this.driverText.Name = "driverText";
+            this.driverText.Size = new System.Drawing.Size(196, 29);
+            this.driverText.TabIndex = 3;
+            this.driverText.Text = "Sürücü";
+            this.driverText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.driverText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
+            // 
+            // genderBox
+            // 
+            this.genderBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.genderBox.FormattingEnabled = true;
+            this.genderBox.Items.AddRange(new object[] {
+            "Erkek",
+            "Kadın"});
+            this.genderBox.Location = new System.Drawing.Point(934, 86);
+            this.genderBox.Name = "genderBox";
+            this.genderBox.Size = new System.Drawing.Size(196, 29);
+            this.genderBox.TabIndex = 4;
+            this.genderBox.Text = "Cinsiyet";
+            // 
+            // carTypeText
+            // 
+            this.carTypeText.BackColor = System.Drawing.SystemColors.Window;
+            this.carTypeText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.carTypeText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carTypeText.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.carTypeText.Location = new System.Drawing.Point(422, 143);
+            this.carTypeText.Name = "carTypeText";
+            this.carTypeText.Size = new System.Drawing.Size(196, 29);
+            this.carTypeText.TabIndex = 3;
+            this.carTypeText.Text = "Araç Tipi";
+            this.carTypeText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.carTypeText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
+            // 
+            // colorText
+            // 
+            this.colorText.BackColor = System.Drawing.SystemColors.Window;
+            this.colorText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.colorText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colorText.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.colorText.Location = new System.Drawing.Point(754, 143);
+            this.colorText.Name = "colorText";
+            this.colorText.Size = new System.Drawing.Size(196, 29);
+            this.colorText.TabIndex = 3;
+            this.colorText.Text = "Renk";
+            this.colorText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colorText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.BackColor = System.Drawing.Color.Brown;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.ForeColor = System.Drawing.Color.White;
+            this.deleteButton.Location = new System.Drawing.Point(263, 194);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(196, 35);
+            this.deleteButton.TabIndex = 5;
+            this.deleteButton.Text = "Aracı Sil";
+            this.deleteButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // addButton
+            // 
+            this.addButton.BackColor = System.Drawing.Color.Green;
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.ForeColor = System.Drawing.Color.White;
+            this.addButton.Location = new System.Drawing.Point(584, 194);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(196, 35);
+            this.addButton.TabIndex = 5;
+            this.addButton.Text = "Araç Ekle";
+            this.addButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // editButton
+            // 
+            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(101)))), ((int)(((byte)(19)))));
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ForeColor = System.Drawing.Color.White;
+            this.editButton.Location = new System.Drawing.Point(934, 194);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(196, 35);
+            this.editButton.TabIndex = 5;
+            this.editButton.Text = "Aracı Düzenle";
+            this.editButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // carsGrid
+            // 
+            this.carsGrid.AllowUserToAddRows = false;
+            this.carsGrid.AllowUserToDeleteRows = false;
+            this.carsGrid.AllowUserToResizeRows = false;
+            this.carsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.carsGrid.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.carsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.carsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.carsGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.carsGrid.Location = new System.Drawing.Point(128, 257);
+            this.carsGrid.Name = "carsGrid";
+            this.carsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.carsGrid.Size = new System.Drawing.Size(1127, 581);
+            this.carsGrid.TabIndex = 6;
+            this.carsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.carsGrid_CellContentClick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Green;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(185, 40);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1005, 30);
+            this.panel2.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(385, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(235, 21);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Otopark Yönetim Sistemi v0.7";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // CarPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -339,7 +353,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1450, 850);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.carsGrid);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.deleteButton);
@@ -358,16 +372,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CarPannel";
             this.leftPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.garagePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closePic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carsGrid)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,7 +405,7 @@
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button editButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView carsGrid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;

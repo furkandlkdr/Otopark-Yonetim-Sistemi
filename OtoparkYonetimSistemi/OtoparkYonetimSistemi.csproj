@@ -52,6 +52,12 @@
     <Compile Include="CarPanel.Designer.cs">
       <DependentUpon>CarPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions.cs" />
+    <Compile Include="Otopark_Yonetim_SistemiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Otopark_Yonetim_SistemiDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Places.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Otopark_Yonetim_SistemiDataSet.xsc">
+      <DependentUpon>Otopark_Yonetim_SistemiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Otopark_Yonetim_SistemiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Otopark_Yonetim_SistemiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Otopark_Yonetim_SistemiDataSet.xss">
+      <DependentUpon>Otopark_Yonetim_SistemiDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
