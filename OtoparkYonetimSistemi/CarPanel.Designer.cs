@@ -60,7 +60,7 @@
             // 
             // leftPanel
             // 
-            this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(101)))), ((int)(((byte)(19)))));
+            this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
             this.leftPanel.Controls.Add(this.label1);
             this.leftPanel.Controls.Add(this.label2);
             this.leftPanel.Controls.Add(this.label3);
@@ -107,7 +107,7 @@
             // 
             // logoutButton
             // 
-            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(101)))), ((int)(((byte)(19)))));
+            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
             this.logoutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.logoutButton.Image = global::OtoparkYonetimSistemi.Properties.Resources.logout;
             this.logoutButton.Location = new System.Drawing.Point(29, 778);
@@ -119,7 +119,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(101)))), ((int)(((byte)(19)))));
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
             this.pictureBox2.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking;
             this.pictureBox2.Location = new System.Drawing.Point(12, 462);
             this.pictureBox2.Name = "pictureBox2";
@@ -130,7 +130,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(101)))), ((int)(((byte)(19)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
             this.pictureBox1.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking_logo;
             this.pictureBox1.Location = new System.Drawing.Point(12, 314);
             this.pictureBox1.Name = "pictureBox1";
@@ -141,7 +141,7 @@
             // 
             // garagePic
             // 
-            this.garagePic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(101)))), ((int)(((byte)(19)))));
+            this.garagePic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
             this.garagePic.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking;
             this.garagePic.Location = new System.Drawing.Point(12, 165);
             this.garagePic.Name = "garagePic";
@@ -186,7 +186,7 @@
             // 
             this.header.AutoSize = true;
             this.header.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.header.ForeColor = System.Drawing.Color.Green;
+            this.header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(215)))), ((int)(((byte)(147)))));
             this.header.Location = new System.Drawing.Point(124, 12);
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(141, 25);
@@ -269,7 +269,7 @@
             this.deleteButton.BackColor = System.Drawing.Color.Brown;
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.ForeColor = System.Drawing.Color.White;
+            this.deleteButton.ForeColor = System.Drawing.Color.Black;
             this.deleteButton.Location = new System.Drawing.Point(263, 194);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(196, 35);
@@ -281,10 +281,10 @@
             // 
             // addButton
             // 
-            this.addButton.BackColor = System.Drawing.Color.Green;
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(215)))), ((int)(((byte)(147)))));
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.ForeColor = System.Drawing.Color.White;
+            this.addButton.ForeColor = System.Drawing.Color.Black;
             this.addButton.Location = new System.Drawing.Point(584, 194);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(196, 35);
@@ -296,10 +296,10 @@
             // 
             // editButton
             // 
-            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(101)))), ((int)(((byte)(19)))));
+            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.ForeColor = System.Drawing.Color.White;
+            this.editButton.ForeColor = System.Drawing.Color.Black;
             this.editButton.Location = new System.Drawing.Point(934, 194);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(196, 35);
@@ -328,7 +328,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Green;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(215)))), ((int)(((byte)(147)))));
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(185, 40);
             this.panel2.Name = "panel2";
@@ -339,7 +339,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(385, 3);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(235, 21);
