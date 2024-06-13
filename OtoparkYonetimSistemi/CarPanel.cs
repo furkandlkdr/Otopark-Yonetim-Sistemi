@@ -10,11 +10,10 @@ namespace OtoparkYonetimSistemi {
             ShowCars();
         }
         private void disappearLabel(object sender, KeyPressEventArgs e) {
-            if (sender is TextBox) {
-                TextBox text = (TextBox) sender;
-                if (text.Text == "Plaka" || text.Text == "Araç Tipi" || text.Text == "Renk" || text.Text == "Sürücü") {
-                    text.Text = "";
-                }
+            if (sender is TextBox text && 
+                (text.Text == "Plaka" || text.Text == "Araç Tipi" ||
+                text.Text == "Renk" || text.Text == "Sürücü")) {
+                text.Text = "";
             }
         }
         private void ShowCars() {
@@ -24,7 +23,7 @@ namespace OtoparkYonetimSistemi {
 
         int Key = 0;
         private void carsGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-            if(carsGrid.SelectedRows.Count == 0) {
+            if (carsGrid.SelectedRows.Count == 0) {
                 return;
             }
             plateText.Text = carsGrid.SelectedRows[0].Cells[1].Value.ToString();
@@ -114,8 +113,22 @@ namespace OtoparkYonetimSistemi {
             }
         }
 
-        private void genderBox_SelectedIndexChanged(object sender, EventArgs e) {
+        private void pictureBox1_Click(object sender, EventArgs e) {
+            ParkingScreen parkingScreen = new ParkingScreen();
+            parkingScreen.Show();
+            this.Hide();
+        }
 
+        private void placesPic_Click(object sender, EventArgs e) {
+            Places places = new Places();
+            places.Show();
+            this.Hide();
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e) {
+            SignPage login = new SignPage();
+            login.Show();
+            this.Hide();
         }
     }
 }

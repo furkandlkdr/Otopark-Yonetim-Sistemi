@@ -28,8 +28,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.logoutButton = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.placesPic = new System.Windows.Forms.PictureBox();
+            this.parkingPic = new System.Windows.Forms.PictureBox();
             this.garagePic = new System.Windows.Forms.PictureBox();
             this.headerPic = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,8 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.placesPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.garagePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).BeginInit();
             this.panel1.SuspendLayout();
@@ -65,8 +65,8 @@
             this.leftPanel.Controls.Add(this.label2);
             this.leftPanel.Controls.Add(this.label3);
             this.leftPanel.Controls.Add(this.logoutButton);
-            this.leftPanel.Controls.Add(this.pictureBox2);
-            this.leftPanel.Controls.Add(this.pictureBox1);
+            this.leftPanel.Controls.Add(this.placesPic);
+            this.leftPanel.Controls.Add(this.parkingPic);
             this.leftPanel.Controls.Add(this.garagePic);
             this.leftPanel.Controls.Add(this.headerPic);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -116,28 +116,31 @@
             this.logoutButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoutButton.TabIndex = 5;
             this.logoutButton.TabStop = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
-            // pictureBox2
+            // placesPic
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
-            this.pictureBox2.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 462);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(91, 93);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.placesPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
+            this.placesPic.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking;
+            this.placesPic.Location = new System.Drawing.Point(12, 462);
+            this.placesPic.Name = "placesPic";
+            this.placesPic.Size = new System.Drawing.Size(91, 93);
+            this.placesPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.placesPic.TabIndex = 5;
+            this.placesPic.TabStop = false;
+            this.placesPic.Click += new System.EventHandler(this.placesPic_Click);
             // 
-            // pictureBox1
+            // parkingPic
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
-            this.pictureBox1.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 314);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.parkingPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
+            this.parkingPic.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking_logo;
+            this.parkingPic.Location = new System.Drawing.Point(12, 314);
+            this.parkingPic.Name = "parkingPic";
+            this.parkingPic.Size = new System.Drawing.Size(91, 93);
+            this.parkingPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.parkingPic.TabIndex = 5;
+            this.parkingPic.TabStop = false;
+            this.parkingPic.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // garagePic
             // 
@@ -234,7 +237,6 @@
             this.genderBox.Size = new System.Drawing.Size(196, 29);
             this.genderBox.TabIndex = 4;
             this.genderBox.Text = "Cinsiyet";
-            this.genderBox.SelectedIndexChanged += new System.EventHandler(this.genderBox_SelectedIndexChanged);
             // 
             // carTypeText
             // 
@@ -374,8 +376,8 @@
             this.Text = "CarPannel";
             this.leftPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.placesPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.garagePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -395,8 +397,8 @@
         private System.Windows.Forms.PictureBox headerPic;
         private System.Windows.Forms.PictureBox garagePic;
         private System.Windows.Forms.PictureBox logoutButton;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox placesPic;
+        private System.Windows.Forms.PictureBox parkingPic;
         private System.Windows.Forms.Label header;
         private System.Windows.Forms.TextBox plateText;
         private System.Windows.Forms.TextBox driverText;

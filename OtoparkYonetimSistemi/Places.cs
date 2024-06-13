@@ -18,20 +18,14 @@ namespace OtoparkYonetimSistemi {
         }
 
         void resetBoxes() {
-            posRowBox.SelectedIndex = -1;
-            posRowBox.Text = "Satır";
-            posColBox.SelectedIndex = -1;
-            posColBox.Text = "Sütun";
+            placeText.Text = "Alan";
             statusBox.SelectedIndex = -1;
             statusBox.Text = "Durumu";
         }
 
         private void disappearLabel(object sender, KeyPressEventArgs e) {
-            if (sender is TextBox) {
-                TextBox text = (TextBox) sender;
-                if (text.Text == "Park yeri") {
-                    text.Text = "";
-                }
+            if (sender is TextBox a && a.Text == "Alan") {
+                a.Text = "";
             }
         }
         private void ShowPlaces() {
@@ -41,10 +35,9 @@ namespace OtoparkYonetimSistemi {
 
         int Key;
         private void placeGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-            posRowBox.SelectedIndex = (int) placeGrid.SelectedRows[0].Cells[1].Value - 1;
-            posColBox.SelectedIndex = (int) placeGrid.SelectedRows[0].Cells[2].Value - 1;
-            statusBox.SelectedItem = placeGrid.SelectedRows[0].Cells[3].Value.ToString();
-            if (posColBox.SelectedIndex == -1 || posRowBox.SelectedIndex == -1 || statusBox.SelectedIndex == -1) {
+            placeText.Text = placeGrid.SelectedRows[0].Cells[1].Value.ToString();
+            statusBox.SelectedItem = placeGrid.SelectedRows[0].Cells[2].Value.ToString();
+            if (placeText.Text == "Alan" || placeText.Text == "" || statusBox.SelectedIndex == -1) {
                 Key = 0;
             } else {
                 Key = Convert.ToInt32(placeGrid.SelectedRows[0].Cells[0].Value);
@@ -52,15 +45,14 @@ namespace OtoparkYonetimSistemi {
         }
 
         private void addButton_Click(object sender, EventArgs e) {
-            if (posColBox.SelectedIndex == -1 || posRowBox.SelectedIndex == -1 || statusBox.SelectedIndex == -1) {
+            if (placeText.Text == "Alan" || placeText.Text == "" || statusBox.SelectedIndex == -1) {
                 MessageBox.Show("Tüm alanları doldurun lütfen!");
             } else {
                 try {
-                    int PRowPos = Convert.ToInt32(posRowBox.SelectedItem.ToString());
-                    int PColPos = Convert.ToInt32(posColBox.SelectedItem.ToString());
+                    string PPosition = placeText.Text;
                     string PStatus = statusBox.SelectedItem.ToString();
-                    string query = "INSERT INTO PlaceInfo VALUES('{0}', '{1}', '{2}')";
-                    query = string.Format(query, PRowPos, PColPos, PStatus);
+                    string query = "INSERT INTO PlaceInfo VALUES('{0}', '{1}')";
+                    query = string.Format(query, PPosition, PStatus);
                     int rows = Con.SetData(query);
                     if (rows > 0) {
                         MessageBox.Show("Alan başarıyla eklendi");
@@ -76,15 +68,14 @@ namespace OtoparkYonetimSistemi {
         }
 
         private void editButton_Click(object sender, EventArgs e) {
-            if (posColBox.SelectedIndex == -1 || posRowBox.SelectedIndex == -1 || statusBox.SelectedIndex == -1) {
+            if (placeText.Text == "Alan" || placeText.Text == "" || statusBox.SelectedIndex == -1) {
                 MessageBox.Show("Tüm alanları doldurun lütfen!");
             } else {
                 try {
-                    int PRowPos = Convert.ToInt32(posRowBox.SelectedItem.ToString());
-                    int PColPos = Convert.ToInt32(posColBox.SelectedItem.ToString());
+                    string PPosition = placeText.Text;
                     string PStatus = statusBox.SelectedItem.ToString();
-                    string query = "UPDATE PlaceInfo set PRowPos = '{0}', PColPos = '{1}' ,PStatus = '{2}' where PlaceNumber = {3}";
-                    query = string.Format(query, PRowPos, PColPos, PStatus, Key);
+                    string query = "UPDATE PlaceInfo set PPosition = '{0}' ,PStatus = '{1}' where PlaceNumber = {2}";
+                    query = string.Format(query, PPosition, PStatus, Key);
                     int rows = Con.SetData(query);
                     if (rows > 0) {
                         MessageBox.Show("Alan başarıyla güncellendi");
@@ -100,12 +91,11 @@ namespace OtoparkYonetimSistemi {
         }
 
         private void deleteButton_Click(object sender, EventArgs e) {
-            if (posColBox.SelectedIndex == -1 || posRowBox.SelectedIndex == -1 || statusBox.SelectedIndex == -1) {
+            if (placeText.Text == "Alan" || placeText.Text == "" || statusBox.SelectedIndex == -1) {
                 MessageBox.Show("Tüm alanları doldurun lütfen!");
             } else {
                 try {
-                    int PRowPos = Convert.ToInt32(posRowBox.SelectedItem.ToString());
-                    int PColPos = Convert.ToInt32(posColBox.SelectedItem.ToString());
+                    string PPosition = placeText.Text;
                     string PStatus = statusBox.SelectedItem.ToString();
                     string query = "DELETE PlaceInfo where PlaceNumber = {0}";
                     query = string.Format(query, Key);
@@ -120,6 +110,28 @@ namespace OtoparkYonetimSistemi {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void garagePic_Click(object sender, EventArgs e) {
+            CarPanel carPanel = new CarPanel();
+            carPanel.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e) {
+            ParkingScreen parkingScreen = new ParkingScreen();
+            parkingScreen.Show();
+            this.Hide();
+        }
+
+        private void closePic_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e) {
+            SignPage login = new SignPage();
+            login.Show();
+            this.Hide();
         }
     }
 }

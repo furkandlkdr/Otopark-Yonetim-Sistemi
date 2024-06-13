@@ -25,15 +25,16 @@
         private void InitializeComponent() {
             this.closePic = new System.Windows.Forms.PictureBox();
             this.logoutButton = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.placesPic = new System.Windows.Forms.PictureBox();
+            this.parkingPic = new System.Windows.Forms.PictureBox();
             this.garagePic = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.headerPic = new System.Windows.Forms.PictureBox();
             this.header = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.placeBox = new System.Windows.Forms.ComboBox();
+            this.carBox = new System.Windows.Forms.ComboBox();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.bookBtn = new System.Windows.Forms.Button();
@@ -45,79 +46,76 @@
             this.label3 = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.car1 = new System.Windows.Forms.Panel();
+            this.status11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.carAvailable1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.status12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.status13 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.status14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.status21 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.status22 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.status23 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.status24 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.status31 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.status32 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.status33 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.status34 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
+            this.status41 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.status42 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
+            this.status43 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
+            this.status44 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel31 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.carBox = new System.Windows.Forms.ComboBox();
-            this.posColBox = new System.Windows.Forms.ComboBox();
-            this.status11 = new System.Windows.Forms.Label();
-            this.status12 = new System.Windows.Forms.Label();
-            this.status13 = new System.Windows.Forms.Label();
-            this.status14 = new System.Windows.Forms.Label();
-            this.status24 = new System.Windows.Forms.Label();
-            this.status23 = new System.Windows.Forms.Label();
-            this.status22 = new System.Windows.Forms.Label();
-            this.status21 = new System.Windows.Forms.Label();
-            this.status31 = new System.Windows.Forms.Label();
-            this.status32 = new System.Windows.Forms.Label();
-            this.status33 = new System.Windows.Forms.Label();
-            this.status34 = new System.Windows.Forms.Label();
-            this.status44 = new System.Windows.Forms.Label();
-            this.status43 = new System.Windows.Forms.Label();
-            this.status42 = new System.Windows.Forms.Label();
-            this.status41 = new System.Windows.Forms.Label();
-            this.posRowBox = new System.Windows.Forms.ComboBox();
+            this.parkingGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.closePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.placesPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.garagePic)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).BeginInit();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -137,6 +135,7 @@
             this.panel27.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // closePic
@@ -150,6 +149,7 @@
             this.closePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.closePic.TabIndex = 7;
             this.closePic.TabStop = false;
+            this.closePic.Click += new System.EventHandler(this.closePic_Click);
             // 
             // logoutButton
             // 
@@ -162,28 +162,30 @@
             this.logoutButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoutButton.TabIndex = 5;
             this.logoutButton.TabStop = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
-            // pictureBox2
+            // placesPic
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
-            this.pictureBox2.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 462);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(91, 93);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.placesPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
+            this.placesPic.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking;
+            this.placesPic.Location = new System.Drawing.Point(12, 462);
+            this.placesPic.Name = "placesPic";
+            this.placesPic.Size = new System.Drawing.Size(91, 93);
+            this.placesPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.placesPic.TabIndex = 5;
+            this.placesPic.TabStop = false;
+            this.placesPic.Click += new System.EventHandler(this.placesPic_Click);
             // 
-            // pictureBox1
+            // parkingPic
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
-            this.pictureBox1.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 314);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.parkingPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(47)))));
+            this.parkingPic.Image = global::OtoparkYonetimSistemi.Properties.Resources.parking_logo;
+            this.parkingPic.Location = new System.Drawing.Point(12, 314);
+            this.parkingPic.Name = "parkingPic";
+            this.parkingPic.Size = new System.Drawing.Size(91, 93);
+            this.parkingPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.parkingPic.TabIndex = 5;
+            this.parkingPic.TabStop = false;
             // 
             // garagePic
             // 
@@ -195,6 +197,7 @@
             this.garagePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.garagePic.TabIndex = 5;
             this.garagePic.TabStop = false;
+            this.garagePic.Click += new System.EventHandler(this.garagePic_Click);
             // 
             // label4
             // 
@@ -214,18 +217,8 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(129, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1009, 30);
+            this.panel2.Size = new System.Drawing.Size(998, 30);
             this.panel2.TabIndex = 20;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 301);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(268, 537);
-            this.dataGridView1.TabIndex = 19;
             // 
             // headerPic
             // 
@@ -251,28 +244,51 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.posRowBox);
-            this.panel1.Controls.Add(this.posColBox);
+            this.panel1.Controls.Add(this.parkingGrid);
+            this.panel1.Controls.Add(this.placeBox);
             this.panel1.Controls.Add(this.carBox);
             this.panel1.Controls.Add(this.datePicker);
             this.panel1.Controls.Add(this.closePic);
             this.panel1.Controls.Add(this.cancelBtn);
             this.panel1.Controls.Add(this.bookBtn);
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.amountText);
             this.panel1.Controls.Add(this.durationText);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(1154, 0);
+            this.panel1.Location = new System.Drawing.Point(1133, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 850);
+            this.panel1.Size = new System.Drawing.Size(317, 850);
             this.panel1.TabIndex = 9;
+            // 
+            // placeBox
+            // 
+            this.placeBox.CausesValidation = false;
+            this.placeBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placeBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.placeBox.FormattingEnabled = true;
+            this.placeBox.Location = new System.Drawing.Point(20, 142);
+            this.placeBox.Name = "placeBox";
+            this.placeBox.Size = new System.Drawing.Size(164, 29);
+            this.placeBox.TabIndex = 21;
+            this.placeBox.Text = "Alan Seç";
+            // 
+            // carBox
+            // 
+            this.carBox.CausesValidation = false;
+            this.carBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.carBox.FormattingEnabled = true;
+            this.carBox.Location = new System.Drawing.Point(20, 87);
+            this.carBox.Name = "carBox";
+            this.carBox.Size = new System.Drawing.Size(164, 29);
+            this.carBox.TabIndex = 21;
+            this.carBox.Text = "Araç Seç";
             // 
             // datePicker
             // 
             this.datePicker.Location = new System.Drawing.Point(20, 194);
             this.datePicker.Name = "datePicker";
-            this.datePicker.Size = new System.Drawing.Size(130, 29);
+            this.datePicker.Size = new System.Drawing.Size(143, 29);
             this.datePicker.TabIndex = 20;
             // 
             // cancelBtn
@@ -281,7 +297,7 @@
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelBtn.ForeColor = System.Drawing.Color.Black;
-            this.cancelBtn.Location = new System.Drawing.Point(158, 245);
+            this.cancelBtn.Location = new System.Drawing.Point(175, 245);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(130, 35);
             this.cancelBtn.TabIndex = 17;
@@ -310,11 +326,12 @@
             this.amountText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.amountText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.amountText.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.amountText.Location = new System.Drawing.Point(158, 194);
+            this.amountText.Location = new System.Drawing.Point(207, 142);
             this.amountText.Name = "amountText";
-            this.amountText.Size = new System.Drawing.Size(126, 29);
+            this.amountText.Size = new System.Drawing.Size(98, 29);
             this.amountText.TabIndex = 13;
             this.amountText.Text = "Miktar";
+            this.amountText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
             // 
             // durationText
             // 
@@ -322,11 +339,12 @@
             this.durationText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.durationText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.durationText.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.durationText.Location = new System.Drawing.Point(190, 88);
+            this.durationText.Location = new System.Drawing.Point(207, 88);
             this.durationText.Name = "durationText";
             this.durationText.Size = new System.Drawing.Size(94, 29);
             this.durationText.TabIndex = 13;
             this.durationText.Text = "Süre";
+            this.durationText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
             // 
             // label5
             // 
@@ -342,7 +360,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(25, 263);
+            this.label1.Location = new System.Drawing.Point(25, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 48);
             this.label1.TabIndex = 6;
@@ -352,7 +370,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(25, 411);
+            this.label2.Location = new System.Drawing.Point(25, 408);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 48);
             this.label2.TabIndex = 6;
@@ -362,7 +380,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(25, 558);
+            this.label3.Location = new System.Drawing.Point(25, 557);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 48);
             this.label3.TabIndex = 6;
@@ -376,8 +394,8 @@
             this.leftPanel.Controls.Add(this.label2);
             this.leftPanel.Controls.Add(this.label3);
             this.leftPanel.Controls.Add(this.logoutButton);
-            this.leftPanel.Controls.Add(this.pictureBox2);
-            this.leftPanel.Controls.Add(this.pictureBox1);
+            this.leftPanel.Controls.Add(this.placesPic);
+            this.leftPanel.Controls.Add(this.parkingPic);
             this.leftPanel.Controls.Add(this.garagePic);
             this.leftPanel.Controls.Add(this.headerPic);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -395,6 +413,17 @@
             this.car1.Name = "car1";
             this.car1.Size = new System.Drawing.Size(200, 100);
             this.car1.TabIndex = 21;
+            // 
+            // status11
+            // 
+            this.status11.AutoSize = true;
+            this.status11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status11.ForeColor = System.Drawing.Color.Black;
+            this.status11.Location = new System.Drawing.Point(81, 59);
+            this.status11.Name = "status11";
+            this.status11.Size = new System.Drawing.Size(55, 21);
+            this.status11.TabIndex = 0;
+            this.status11.Text = "status";
             // 
             // label6
             // 
@@ -420,10 +449,21 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             this.panel3.Controls.Add(this.status12);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(401, 143);
+            this.panel3.Location = new System.Drawing.Point(396, 143);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 21;
+            // 
+            // status12
+            // 
+            this.status12.AutoSize = true;
+            this.status12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status12.ForeColor = System.Drawing.Color.Black;
+            this.status12.Location = new System.Drawing.Point(81, 59);
+            this.status12.Name = "status12";
+            this.status12.Size = new System.Drawing.Size(55, 21);
+            this.status12.TabIndex = 0;
+            this.status12.Text = "status";
             // 
             // label7
             // 
@@ -439,7 +479,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(114)))), ((int)(((byte)(160)))));
-            this.panel4.Location = new System.Drawing.Point(401, 143);
+            this.panel4.Location = new System.Drawing.Point(396, 143);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(28, 100);
             this.panel4.TabIndex = 0;
@@ -449,10 +489,21 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             this.panel5.Controls.Add(this.status13);
             this.panel5.Controls.Add(this.label8);
-            this.panel5.Location = new System.Drawing.Point(672, 143);
+            this.panel5.Location = new System.Drawing.Point(662, 143);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 100);
             this.panel5.TabIndex = 21;
+            // 
+            // status13
+            // 
+            this.status13.AutoSize = true;
+            this.status13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status13.ForeColor = System.Drawing.Color.Black;
+            this.status13.Location = new System.Drawing.Point(76, 59);
+            this.status13.Name = "status13";
+            this.status13.Size = new System.Drawing.Size(55, 21);
+            this.status13.TabIndex = 0;
+            this.status13.Text = "status";
             // 
             // label8
             // 
@@ -468,7 +519,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(114)))), ((int)(((byte)(160)))));
-            this.panel6.Location = new System.Drawing.Point(672, 143);
+            this.panel6.Location = new System.Drawing.Point(662, 143);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(28, 100);
             this.panel6.TabIndex = 0;
@@ -478,10 +529,21 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             this.panel7.Controls.Add(this.status14);
             this.panel7.Controls.Add(this.label9);
-            this.panel7.Location = new System.Drawing.Point(938, 143);
+            this.panel7.Location = new System.Drawing.Point(917, 143);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(200, 100);
             this.panel7.TabIndex = 21;
+            // 
+            // status14
+            // 
+            this.status14.AutoSize = true;
+            this.status14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status14.ForeColor = System.Drawing.Color.Black;
+            this.status14.Location = new System.Drawing.Point(86, 59);
+            this.status14.Name = "status14";
+            this.status14.Size = new System.Drawing.Size(55, 21);
+            this.status14.TabIndex = 0;
+            this.status14.Text = "status";
             // 
             // label9
             // 
@@ -497,7 +559,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(114)))), ((int)(((byte)(160)))));
-            this.panel8.Location = new System.Drawing.Point(938, 143);
+            this.panel8.Location = new System.Drawing.Point(917, 143);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(28, 100);
             this.panel8.TabIndex = 0;
@@ -511,6 +573,17 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(200, 100);
             this.panel9.TabIndex = 21;
+            // 
+            // status21
+            // 
+            this.status21.AutoSize = true;
+            this.status21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status21.ForeColor = System.Drawing.Color.Black;
+            this.status21.Location = new System.Drawing.Point(81, 61);
+            this.status21.Name = "status21";
+            this.status21.Size = new System.Drawing.Size(55, 21);
+            this.status21.TabIndex = 0;
+            this.status21.Text = "status";
             // 
             // label10
             // 
@@ -536,10 +609,21 @@
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(90)))), ((int)(((byte)(148)))));
             this.panel11.Controls.Add(this.status22);
             this.panel11.Controls.Add(this.label11);
-            this.panel11.Location = new System.Drawing.Point(401, 314);
+            this.panel11.Location = new System.Drawing.Point(396, 314);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(200, 100);
             this.panel11.TabIndex = 21;
+            // 
+            // status22
+            // 
+            this.status22.AutoSize = true;
+            this.status22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status22.ForeColor = System.Drawing.Color.Black;
+            this.status22.Location = new System.Drawing.Point(81, 61);
+            this.status22.Name = "status22";
+            this.status22.Size = new System.Drawing.Size(55, 21);
+            this.status22.TabIndex = 0;
+            this.status22.Text = "status";
             // 
             // label11
             // 
@@ -555,7 +639,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(117)))), ((int)(((byte)(170)))));
-            this.panel12.Location = new System.Drawing.Point(401, 314);
+            this.panel12.Location = new System.Drawing.Point(396, 314);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(28, 100);
             this.panel12.TabIndex = 0;
@@ -565,10 +649,21 @@
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(90)))), ((int)(((byte)(148)))));
             this.panel13.Controls.Add(this.status23);
             this.panel13.Controls.Add(this.label12);
-            this.panel13.Location = new System.Drawing.Point(672, 314);
+            this.panel13.Location = new System.Drawing.Point(662, 314);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(200, 100);
             this.panel13.TabIndex = 21;
+            // 
+            // status23
+            // 
+            this.status23.AutoSize = true;
+            this.status23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status23.ForeColor = System.Drawing.Color.Black;
+            this.status23.Location = new System.Drawing.Point(76, 61);
+            this.status23.Name = "status23";
+            this.status23.Size = new System.Drawing.Size(55, 21);
+            this.status23.TabIndex = 0;
+            this.status23.Text = "status";
             // 
             // label12
             // 
@@ -586,10 +681,21 @@
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(90)))), ((int)(((byte)(148)))));
             this.panel14.Controls.Add(this.status24);
             this.panel14.Controls.Add(this.label13);
-            this.panel14.Location = new System.Drawing.Point(938, 314);
+            this.panel14.Location = new System.Drawing.Point(917, 314);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(200, 100);
             this.panel14.TabIndex = 21;
+            // 
+            // status24
+            // 
+            this.status24.AutoSize = true;
+            this.status24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status24.ForeColor = System.Drawing.Color.Black;
+            this.status24.Location = new System.Drawing.Point(86, 61);
+            this.status24.Name = "status24";
+            this.status24.Size = new System.Drawing.Size(55, 21);
+            this.status24.TabIndex = 0;
+            this.status24.Text = "status";
             // 
             // label13
             // 
@@ -605,7 +711,7 @@
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(117)))), ((int)(((byte)(170)))));
-            this.panel15.Location = new System.Drawing.Point(672, 314);
+            this.panel15.Location = new System.Drawing.Point(662, 314);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(28, 100);
             this.panel15.TabIndex = 0;
@@ -613,7 +719,7 @@
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(117)))), ((int)(((byte)(170)))));
-            this.panel16.Location = new System.Drawing.Point(938, 314);
+            this.panel16.Location = new System.Drawing.Point(917, 314);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(28, 100);
             this.panel16.TabIndex = 0;
@@ -627,6 +733,17 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(200, 100);
             this.panel17.TabIndex = 21;
+            // 
+            // status31
+            // 
+            this.status31.AutoSize = true;
+            this.status31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status31.ForeColor = System.Drawing.Color.Black;
+            this.status31.Location = new System.Drawing.Point(81, 66);
+            this.status31.Name = "status31";
+            this.status31.Size = new System.Drawing.Size(55, 21);
+            this.status31.TabIndex = 0;
+            this.status31.Text = "status";
             // 
             // label17
             // 
@@ -652,10 +769,21 @@
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             this.panel19.Controls.Add(this.status32);
             this.panel19.Controls.Add(this.label16);
-            this.panel19.Location = new System.Drawing.Point(401, 506);
+            this.panel19.Location = new System.Drawing.Point(396, 506);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(200, 100);
             this.panel19.TabIndex = 21;
+            // 
+            // status32
+            // 
+            this.status32.AutoSize = true;
+            this.status32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status32.ForeColor = System.Drawing.Color.Black;
+            this.status32.Location = new System.Drawing.Point(81, 66);
+            this.status32.Name = "status32";
+            this.status32.Size = new System.Drawing.Size(55, 21);
+            this.status32.TabIndex = 0;
+            this.status32.Text = "status";
             // 
             // label16
             // 
@@ -671,7 +799,7 @@
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(114)))), ((int)(((byte)(160)))));
-            this.panel20.Location = new System.Drawing.Point(401, 506);
+            this.panel20.Location = new System.Drawing.Point(396, 506);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(28, 100);
             this.panel20.TabIndex = 0;
@@ -681,10 +809,21 @@
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             this.panel21.Controls.Add(this.status33);
             this.panel21.Controls.Add(this.label15);
-            this.panel21.Location = new System.Drawing.Point(672, 506);
+            this.panel21.Location = new System.Drawing.Point(662, 506);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(200, 100);
             this.panel21.TabIndex = 21;
+            // 
+            // status33
+            // 
+            this.status33.AutoSize = true;
+            this.status33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status33.ForeColor = System.Drawing.Color.Black;
+            this.status33.Location = new System.Drawing.Point(76, 66);
+            this.status33.Name = "status33";
+            this.status33.Size = new System.Drawing.Size(55, 21);
+            this.status33.TabIndex = 0;
+            this.status33.Text = "status";
             // 
             // label15
             // 
@@ -702,10 +841,21 @@
             this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(180)))), ((int)(((byte)(255)))));
             this.panel22.Controls.Add(this.status34);
             this.panel22.Controls.Add(this.label14);
-            this.panel22.Location = new System.Drawing.Point(938, 506);
+            this.panel22.Location = new System.Drawing.Point(917, 506);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(200, 100);
             this.panel22.TabIndex = 21;
+            // 
+            // status34
+            // 
+            this.status34.AutoSize = true;
+            this.status34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status34.ForeColor = System.Drawing.Color.Black;
+            this.status34.Location = new System.Drawing.Point(86, 66);
+            this.status34.Name = "status34";
+            this.status34.Size = new System.Drawing.Size(55, 21);
+            this.status34.TabIndex = 0;
+            this.status34.Text = "status";
             // 
             // label14
             // 
@@ -721,7 +871,7 @@
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(114)))), ((int)(((byte)(160)))));
-            this.panel23.Location = new System.Drawing.Point(672, 506);
+            this.panel23.Location = new System.Drawing.Point(662, 506);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(28, 100);
             this.panel23.TabIndex = 0;
@@ -729,7 +879,7 @@
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(114)))), ((int)(((byte)(160)))));
-            this.panel24.Location = new System.Drawing.Point(938, 506);
+            this.panel24.Location = new System.Drawing.Point(917, 506);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(28, 100);
             this.panel24.TabIndex = 0;
@@ -744,6 +894,28 @@
             this.panel25.Size = new System.Drawing.Size(200, 100);
             this.panel25.TabIndex = 21;
             // 
+            // status41
+            // 
+            this.status41.AutoSize = true;
+            this.status41.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status41.ForeColor = System.Drawing.Color.Black;
+            this.status41.Location = new System.Drawing.Point(81, 66);
+            this.status41.Name = "status41";
+            this.status41.Size = new System.Drawing.Size(55, 21);
+            this.status41.TabIndex = 0;
+            this.status41.Text = "status";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(41, 12);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(132, 21);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Alan SUT4/SAT1";
+            // 
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(117)))), ((int)(((byte)(170)))));
@@ -757,276 +929,10 @@
             this.panel27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(90)))), ((int)(((byte)(148)))));
             this.panel27.Controls.Add(this.status42);
             this.panel27.Controls.Add(this.label20);
-            this.panel27.Location = new System.Drawing.Point(401, 684);
+            this.panel27.Location = new System.Drawing.Point(396, 684);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(200, 100);
             this.panel27.TabIndex = 21;
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(117)))), ((int)(((byte)(170)))));
-            this.panel28.Location = new System.Drawing.Point(401, 684);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(28, 100);
-            this.panel28.TabIndex = 0;
-            // 
-            // panel29
-            // 
-            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(90)))), ((int)(((byte)(148)))));
-            this.panel29.Controls.Add(this.status43);
-            this.panel29.Controls.Add(this.label19);
-            this.panel29.Location = new System.Drawing.Point(672, 684);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(200, 100);
-            this.panel29.TabIndex = 21;
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(90)))), ((int)(((byte)(148)))));
-            this.panel30.Controls.Add(this.status44);
-            this.panel30.Controls.Add(this.label18);
-            this.panel30.Location = new System.Drawing.Point(938, 684);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(200, 100);
-            this.panel30.TabIndex = 21;
-            // 
-            // panel31
-            // 
-            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(117)))), ((int)(((byte)(170)))));
-            this.panel31.Location = new System.Drawing.Point(672, 684);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(28, 100);
-            this.panel31.TabIndex = 0;
-            // 
-            // panel32
-            // 
-            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(117)))), ((int)(((byte)(170)))));
-            this.panel32.Location = new System.Drawing.Point(938, 684);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(28, 100);
-            this.panel32.TabIndex = 0;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(41, 12);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(132, 21);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Alan SUT4/SAT4";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(41, 12);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(132, 21);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Alan SUT4/SAT3";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(41, 12);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(132, 21);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Alan SUT4/SAT2";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(41, 12);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(132, 21);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Alan SUT4/SAT1";
-            // 
-            // carBox
-            // 
-            this.carBox.CausesValidation = false;
-            this.carBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.carBox.FormattingEnabled = true;
-            this.carBox.Location = new System.Drawing.Point(20, 87);
-            this.carBox.Name = "carBox";
-            this.carBox.Size = new System.Drawing.Size(164, 29);
-            this.carBox.TabIndex = 21;
-            this.carBox.Text = "Araç Seç";
-            // 
-            // posColBox
-            // 
-            this.posColBox.CausesValidation = false;
-            this.posColBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posColBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.posColBox.FormattingEnabled = true;
-            this.posColBox.Location = new System.Drawing.Point(20, 142);
-            this.posColBox.Name = "posColBox";
-            this.posColBox.Size = new System.Drawing.Size(130, 29);
-            this.posColBox.TabIndex = 21;
-            this.posColBox.Text = "Sutün Seç";
-            // 
-            // status11
-            // 
-            this.status11.AutoSize = true;
-            this.status11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status11.ForeColor = System.Drawing.Color.Black;
-            this.status11.Location = new System.Drawing.Point(81, 59);
-            this.status11.Name = "status11";
-            this.status11.Size = new System.Drawing.Size(55, 21);
-            this.status11.TabIndex = 0;
-            this.status11.Text = "status";
-            // 
-            // status12
-            // 
-            this.status12.AutoSize = true;
-            this.status12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status12.ForeColor = System.Drawing.Color.Black;
-            this.status12.Location = new System.Drawing.Point(81, 59);
-            this.status12.Name = "status12";
-            this.status12.Size = new System.Drawing.Size(55, 21);
-            this.status12.TabIndex = 0;
-            this.status12.Text = "status";
-            // 
-            // status13
-            // 
-            this.status13.AutoSize = true;
-            this.status13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status13.ForeColor = System.Drawing.Color.Black;
-            this.status13.Location = new System.Drawing.Point(76, 59);
-            this.status13.Name = "status13";
-            this.status13.Size = new System.Drawing.Size(55, 21);
-            this.status13.TabIndex = 0;
-            this.status13.Text = "status";
-            // 
-            // status14
-            // 
-            this.status14.AutoSize = true;
-            this.status14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status14.ForeColor = System.Drawing.Color.Black;
-            this.status14.Location = new System.Drawing.Point(86, 59);
-            this.status14.Name = "status14";
-            this.status14.Size = new System.Drawing.Size(55, 21);
-            this.status14.TabIndex = 0;
-            this.status14.Text = "status";
-            // 
-            // status24
-            // 
-            this.status24.AutoSize = true;
-            this.status24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status24.ForeColor = System.Drawing.Color.Black;
-            this.status24.Location = new System.Drawing.Point(86, 61);
-            this.status24.Name = "status24";
-            this.status24.Size = new System.Drawing.Size(55, 21);
-            this.status24.TabIndex = 0;
-            this.status24.Text = "status";
-            // 
-            // status23
-            // 
-            this.status23.AutoSize = true;
-            this.status23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status23.ForeColor = System.Drawing.Color.Black;
-            this.status23.Location = new System.Drawing.Point(76, 61);
-            this.status23.Name = "status23";
-            this.status23.Size = new System.Drawing.Size(55, 21);
-            this.status23.TabIndex = 0;
-            this.status23.Text = "status";
-            // 
-            // status22
-            // 
-            this.status22.AutoSize = true;
-            this.status22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status22.ForeColor = System.Drawing.Color.Black;
-            this.status22.Location = new System.Drawing.Point(81, 61);
-            this.status22.Name = "status22";
-            this.status22.Size = new System.Drawing.Size(55, 21);
-            this.status22.TabIndex = 0;
-            this.status22.Text = "status";
-            // 
-            // status21
-            // 
-            this.status21.AutoSize = true;
-            this.status21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status21.ForeColor = System.Drawing.Color.Black;
-            this.status21.Location = new System.Drawing.Point(81, 61);
-            this.status21.Name = "status21";
-            this.status21.Size = new System.Drawing.Size(55, 21);
-            this.status21.TabIndex = 0;
-            this.status21.Text = "status";
-            // 
-            // status31
-            // 
-            this.status31.AutoSize = true;
-            this.status31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status31.ForeColor = System.Drawing.Color.Black;
-            this.status31.Location = new System.Drawing.Point(81, 66);
-            this.status31.Name = "status31";
-            this.status31.Size = new System.Drawing.Size(55, 21);
-            this.status31.TabIndex = 0;
-            this.status31.Text = "status";
-            // 
-            // status32
-            // 
-            this.status32.AutoSize = true;
-            this.status32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status32.ForeColor = System.Drawing.Color.Black;
-            this.status32.Location = new System.Drawing.Point(81, 66);
-            this.status32.Name = "status32";
-            this.status32.Size = new System.Drawing.Size(55, 21);
-            this.status32.TabIndex = 0;
-            this.status32.Text = "status";
-            // 
-            // status33
-            // 
-            this.status33.AutoSize = true;
-            this.status33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status33.ForeColor = System.Drawing.Color.Black;
-            this.status33.Location = new System.Drawing.Point(76, 66);
-            this.status33.Name = "status33";
-            this.status33.Size = new System.Drawing.Size(55, 21);
-            this.status33.TabIndex = 0;
-            this.status33.Text = "status";
-            // 
-            // status34
-            // 
-            this.status34.AutoSize = true;
-            this.status34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status34.ForeColor = System.Drawing.Color.Black;
-            this.status34.Location = new System.Drawing.Point(86, 66);
-            this.status34.Name = "status34";
-            this.status34.Size = new System.Drawing.Size(55, 21);
-            this.status34.TabIndex = 0;
-            this.status34.Text = "status";
-            // 
-            // status44
-            // 
-            this.status44.AutoSize = true;
-            this.status44.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status44.ForeColor = System.Drawing.Color.Black;
-            this.status44.Location = new System.Drawing.Point(86, 66);
-            this.status44.Name = "status44";
-            this.status44.Size = new System.Drawing.Size(55, 21);
-            this.status44.TabIndex = 0;
-            this.status44.Text = "status";
-            // 
-            // status43
-            // 
-            this.status43.AutoSize = true;
-            this.status43.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status43.ForeColor = System.Drawing.Color.Black;
-            this.status43.Location = new System.Drawing.Point(76, 66);
-            this.status43.Name = "status43";
-            this.status43.Size = new System.Drawing.Size(55, 21);
-            this.status43.TabIndex = 0;
-            this.status43.Text = "status";
             // 
             // status42
             // 
@@ -1039,28 +945,120 @@
             this.status42.TabIndex = 0;
             this.status42.Text = "status";
             // 
-            // status41
+            // label20
             // 
-            this.status41.AutoSize = true;
-            this.status41.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status41.ForeColor = System.Drawing.Color.Black;
-            this.status41.Location = new System.Drawing.Point(81, 66);
-            this.status41.Name = "status41";
-            this.status41.Size = new System.Drawing.Size(55, 21);
-            this.status41.TabIndex = 0;
-            this.status41.Text = "status";
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(41, 12);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(132, 21);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Alan SUT4/SAT2";
             // 
-            // posRowBox
+            // panel28
             // 
-            this.posRowBox.CausesValidation = false;
-            this.posRowBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posRowBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.posRowBox.FormattingEnabled = true;
-            this.posRowBox.Location = new System.Drawing.Point(158, 142);
-            this.posRowBox.Name = "posRowBox";
-            this.posRowBox.Size = new System.Drawing.Size(126, 29);
-            this.posRowBox.TabIndex = 21;
-            this.posRowBox.Text = "Satır Seç";
+            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(117)))), ((int)(((byte)(170)))));
+            this.panel28.Location = new System.Drawing.Point(396, 684);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(28, 100);
+            this.panel28.TabIndex = 0;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(90)))), ((int)(((byte)(148)))));
+            this.panel29.Controls.Add(this.status43);
+            this.panel29.Controls.Add(this.label19);
+            this.panel29.Location = new System.Drawing.Point(662, 684);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(200, 100);
+            this.panel29.TabIndex = 21;
+            // 
+            // status43
+            // 
+            this.status43.AutoSize = true;
+            this.status43.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status43.ForeColor = System.Drawing.Color.Black;
+            this.status43.Location = new System.Drawing.Point(76, 66);
+            this.status43.Name = "status43";
+            this.status43.Size = new System.Drawing.Size(55, 21);
+            this.status43.TabIndex = 0;
+            this.status43.Text = "status";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(41, 12);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(132, 21);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Alan SUT4/SAT3";
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(90)))), ((int)(((byte)(148)))));
+            this.panel30.Controls.Add(this.status44);
+            this.panel30.Controls.Add(this.label18);
+            this.panel30.Location = new System.Drawing.Point(917, 684);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(200, 100);
+            this.panel30.TabIndex = 21;
+            // 
+            // status44
+            // 
+            this.status44.AutoSize = true;
+            this.status44.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status44.ForeColor = System.Drawing.Color.Black;
+            this.status44.Location = new System.Drawing.Point(86, 66);
+            this.status44.Name = "status44";
+            this.status44.Size = new System.Drawing.Size(55, 21);
+            this.status44.TabIndex = 0;
+            this.status44.Text = "status";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(41, 12);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(132, 21);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Alan SUT4/SAT4";
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(117)))), ((int)(((byte)(170)))));
+            this.panel31.Location = new System.Drawing.Point(662, 684);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(28, 100);
+            this.panel31.TabIndex = 0;
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(117)))), ((int)(((byte)(170)))));
+            this.panel32.Location = new System.Drawing.Point(917, 684);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(28, 100);
+            this.panel32.TabIndex = 0;
+            // 
+            // parkingGrid
+            // 
+            this.parkingGrid.AllowUserToAddRows = false;
+            this.parkingGrid.AllowUserToDeleteRows = false;
+            this.parkingGrid.AllowUserToResizeRows = false;
+            this.parkingGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.parkingGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.parkingGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.parkingGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.parkingGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.parkingGrid.Location = new System.Drawing.Point(16, 301);
+            this.parkingGrid.Name = "parkingGrid";
+            this.parkingGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.parkingGrid.Size = new System.Drawing.Size(289, 537);
+            this.parkingGrid.TabIndex = 22;
             // 
             // ParkingScreen
             // 
@@ -1108,15 +1106,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ParkingScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParkingScreen";
             ((System.ComponentModel.ISupportInitialize)(this.closePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.placesPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.garagePic)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1153,6 +1151,7 @@
             this.panel29.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.parkingGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1162,12 +1161,11 @@
 
         private System.Windows.Forms.PictureBox closePic;
         private System.Windows.Forms.PictureBox logoutButton;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox placesPic;
+        private System.Windows.Forms.PictureBox parkingPic;
         private System.Windows.Forms.PictureBox garagePic;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox headerPic;
         private System.Windows.Forms.Label header;
         private System.Windows.Forms.Panel panel1;
@@ -1230,7 +1228,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox carBox;
-        private System.Windows.Forms.ComboBox posColBox;
         private System.Windows.Forms.Label status11;
         private System.Windows.Forms.Label status12;
         private System.Windows.Forms.Label status13;
@@ -1247,6 +1244,7 @@
         private System.Windows.Forms.Label status42;
         private System.Windows.Forms.Label status43;
         private System.Windows.Forms.Label status44;
-        private System.Windows.Forms.ComboBox posRowBox;
+        private System.Windows.Forms.ComboBox placeBox;
+        private System.Windows.Forms.DataGridView parkingGrid;
     }
 }

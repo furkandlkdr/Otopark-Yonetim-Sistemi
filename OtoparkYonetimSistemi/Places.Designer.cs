@@ -42,8 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.garagePic = new System.Windows.Forms.PictureBox();
             this.headerPic = new System.Windows.Forms.PictureBox();
-            this.posRowBox = new System.Windows.Forms.ComboBox();
-            this.posColBox = new System.Windows.Forms.ComboBox();
+            this.placeText = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.placeGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -147,7 +146,7 @@
             "Dolu",
             "Bos",
             "Bakimda"});
-            this.statusBox.Location = new System.Drawing.Point(935, 83);
+            this.statusBox.Location = new System.Drawing.Point(774, 82);
             this.statusBox.Name = "statusBox";
             this.statusBox.Size = new System.Drawing.Size(196, 29);
             this.statusBox.TabIndex = 15;
@@ -185,6 +184,7 @@
             this.closePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.closePic.TabIndex = 7;
             this.closePic.TabStop = false;
+            this.closePic.Click += new System.EventHandler(this.closePic_Click);
             // 
             // label1
             // 
@@ -244,6 +244,7 @@
             this.logoutButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoutButton.TabIndex = 5;
             this.logoutButton.TabStop = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // pictureBox2
             // 
@@ -266,6 +267,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // garagePic
             // 
@@ -277,6 +279,7 @@
             this.garagePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.garagePic.TabIndex = 5;
             this.garagePic.TabStop = false;
+            this.garagePic.Click += new System.EventHandler(this.garagePic_Click);
             // 
             // headerPic
             // 
@@ -288,37 +291,19 @@
             this.headerPic.TabIndex = 5;
             this.headerPic.TabStop = false;
             // 
-            // posRowBox
+            // placeText
             // 
-            this.posRowBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posRowBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.posRowBox.FormattingEnabled = true;
-            this.posRowBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.posRowBox.Location = new System.Drawing.Point(263, 83);
-            this.posRowBox.Name = "posRowBox";
-            this.posRowBox.Size = new System.Drawing.Size(196, 29);
-            this.posRowBox.TabIndex = 15;
-            this.posRowBox.Text = "Satır";
-            // 
-            // posColBox
-            // 
-            this.posColBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posColBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.posColBox.FormattingEnabled = true;
-            this.posColBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.posColBox.Location = new System.Drawing.Point(590, 83);
-            this.posColBox.Name = "posColBox";
-            this.posColBox.Size = new System.Drawing.Size(196, 29);
-            this.posColBox.TabIndex = 15;
-            this.posColBox.Text = "Sütun";
+            this.placeText.BackColor = System.Drawing.SystemColors.Window;
+            this.placeText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.placeText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.placeText.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.placeText.Location = new System.Drawing.Point(424, 83);
+            this.placeText.Name = "placeText";
+            this.placeText.Size = new System.Drawing.Size(196, 29);
+            this.placeText.TabIndex = 21;
+            this.placeText.Text = "Alan";
+            this.placeText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.placeText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
             // 
             // Places
             // 
@@ -326,13 +311,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1450, 850);
+            this.Controls.Add(this.placeText);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.placeGrid);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.posColBox);
-            this.Controls.Add(this.posRowBox);
             this.Controls.Add(this.statusBox);
             this.Controls.Add(this.header);
             this.Controls.Add(this.panel1);
@@ -380,7 +364,6 @@
         private System.Windows.Forms.PictureBox garagePic;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.PictureBox closePic;
-        private System.Windows.Forms.ComboBox posRowBox;
-        private System.Windows.Forms.ComboBox posColBox;
+        private System.Windows.Forms.TextBox placeText;
     }
 }

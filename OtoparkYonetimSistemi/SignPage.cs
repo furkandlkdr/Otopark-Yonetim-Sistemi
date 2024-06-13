@@ -1,24 +1,41 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace OtoparkYonetimSistemi {
     public partial class SignPage : Form {
-        void changeButtonToRounded(Button secilenBtn) {
-            Button koseliBtn = secilenBtn;
-            RoundedButton yuvarlanmisBtn = new RoundedButton {
-                Text = koseliBtn.Text,
-                Size = koseliBtn.Size,
-                Location = koseliBtn.Location,
-                Font = koseliBtn.Font,
-                BackColor = koseliBtn.BackColor,
-                ForeColor = koseliBtn.ForeColor,
-            };
-            this.Controls.Add(yuvarlanmisBtn);
-            this.Controls.Remove(koseliBtn);
+        private void disappearLabel(object sender, KeyPressEventArgs e) {
+            if (sender is TextBox a && (a.Text == "Parola" || a.Text == "Kullanıcı Adı")) {
+                a.Text = "";
+            }
         }
         public SignPage() {
             InitializeComponent();
-            //changeButtonToRounded(signInBtn);
         }
 
+        private void passwordRegex(object sender, KeyPressEventArgs e) {
+            Regex regex = new Regex("^[a-zA-Z0-9!?]{9,}$");
+            if (!regex.IsMatch(passwordTxt.Text)) {
+                MessageBox.Show("Parola en az 9 karakter olmalı ve içerisinde ! veya ? içermelidir!");
+                passwordTxt.Text = "";
+            }
+        }
+
+        private void signInBtn_Click(object sender, System.EventArgs e) {
+            if (usernameTxt.Text == "" || usernameTxt.Text == "Kullanıcı Adı" ||
+                passwordTxt.Text == "Parola "|| passwordTxt.Text == "") {
+                MessageBox.Show("Tüm alanları doldurun lütfen!");
+            } else {
+                if (usernameTxt.Text == "Admin" && passwordTxt.Text == "Admin") {
+                    CarPanel cars = new CarPanel();
+                    cars.Show();
+                    this.Hide();
+                } else {
+                    MessageBox.Show("Kullanıcı adı veya parola hatalı!");
+                    usernameTxt.Text = "";
+                    passwordTxt.Text = "";
+                }
+            }
+        }
     }
 }

@@ -52,6 +52,7 @@
             this.usernameTxt.TabIndex = 2;
             this.usernameTxt.Text = "Kullanıcı Adı";
             this.usernameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.usernameTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
             // 
             // passwordTxt
             // 
@@ -64,6 +65,7 @@
             this.passwordTxt.TabIndex = 2;
             this.passwordTxt.Text = "Parola";
             this.passwordTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.passwordTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
             // 
             // signInBtn
             // 
@@ -78,6 +80,7 @@
             this.signInBtn.Text = "Giris Yap";
             this.signInBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.signInBtn.UseVisualStyleBackColor = false;
+            this.signInBtn.Click += new System.EventHandler(this.signInBtn_Click);
             // 
             // header
             // 
