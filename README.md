@@ -28,6 +28,8 @@ This project is a Windows Forms application built with C# and MSSQL to manage pa
 
 4. **Build and run**: Open the solution in Visual Studio and build the project. Run the executable to start the application.
 
+5. **Login**: *For now* Use username: Admin password: Admin
+
 ## Contributing
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
