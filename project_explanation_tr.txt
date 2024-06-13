@@ -1,0 +1,5 @@
+Faruk Otopark adlı bir otopark işletmecisi;
+giren arabaların takibi ve güvenliği için park edilen yerlerin, giriş çıkış saatlerinin, sürücünün ve araç bilgilerinin kaydedilmesini istiyor.
+
+Giriş yapmanın tek yolu şimdilik username: "Admin" ve password: "Admin",
+giriş yaptıktan sonra 3 form arasından geçiş yaparak verilere erişebilir, veriler ekleyebilir ve eklenmiş verilere müdahale edebiliriz.
