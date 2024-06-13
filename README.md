@@ -22,7 +22,7 @@ This project is a Windows Forms application built with C# and MSSQL to manage pa
 1. **Clone the repository**:
    ```https://github.com/furkandlkdr/Otopark-Yonetim-Sistemi```
 
-2. **Set up the database**: Create an MSSQL database and execute the provided SQL script to create the necessary tables.
+2. **Set up the database**: Create an MSSQL database and execute the provided SQL backup to create tables.
 
 3. **Configure the connection string**: Update the connection string in the `Functions.cs` file with your database credentials.
 
