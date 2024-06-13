@@ -53,6 +53,7 @@
             this.usernameTxt.Text = "Kullanıcı Adı";
             this.usernameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.usernameTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
+            this.usernameTxt.Leave += new System.EventHandler(this.usernameRegex);
             // 
             // passwordTxt
             // 
@@ -66,6 +67,7 @@
             this.passwordTxt.Text = "Parola";
             this.passwordTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.passwordTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disappearLabel);
+            this.passwordTxt.Leave += new System.EventHandler(this.passwordRegex);
             // 
             // signInBtn
             // 

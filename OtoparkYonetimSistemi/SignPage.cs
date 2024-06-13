@@ -13,14 +13,6 @@ namespace OtoparkYonetimSistemi {
             InitializeComponent();
         }
 
-        private void passwordRegex(object sender, KeyPressEventArgs e) {
-            Regex regex = new Regex("^[a-zA-Z0-9!?]{9,}$");
-            if (!regex.IsMatch(passwordTxt.Text)) {
-                MessageBox.Show("Parola en az 9 karakter olmalı ve içerisinde ! veya ? içermelidir!");
-                passwordTxt.Text = "";
-            }
-        }
-
         private void signInBtn_Click(object sender, System.EventArgs e) {
             if (usernameTxt.Text == "" || usernameTxt.Text == "Kullanıcı Adı" ||
                 passwordTxt.Text == "Parola "|| passwordTxt.Text == "") {
@@ -35,6 +27,22 @@ namespace OtoparkYonetimSistemi {
                     usernameTxt.Text = "";
                     passwordTxt.Text = "";
                 }
+            }
+        }
+
+        private void usernameRegex(object sender, EventArgs e) {
+            Regex regex = new Regex("^[a-zA-Z0-9]{5,}$");
+            if (!regex.IsMatch(usernameTxt.Text)) {
+                MessageBox.Show("Kullanıcı adı en az 5 karakter olmalıdır!");
+                usernameTxt.Text = "";
+            }
+        }
+
+        private void passwordRegex(object sender, EventArgs e) {
+            Regex regex = new Regex("^[a-zA-Z0-9!?]{9,}$");
+            if (!regex.IsMatch(passwordTxt.Text)) {
+                MessageBox.Show("Parola en az 9 karakter olmalı ve içerisinde ! veya ? içermelidir!");
+                passwordTxt.Text = "";
             }
         }
     }
